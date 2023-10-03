@@ -21,18 +21,23 @@
 //     }
 // }
 
-enum DemoCourses {
-    FREE = "FREE",
-    PREMIUM = "PREMIUM",
-    PRIVATE = "PRIVATE",
-    HIDDEN = "HIDDEN"
-}
+// enum DemoCourses {
+//     FREE = "FREE",
+//     PREMIUM = "PREMIUM",
+//     PRIVATE = "PRIVATE",
+//     HIDDEN = "HIDDEN"
+// }
 
-const courses = {
-    title: "TypeScript BOOM",
-    type: DemoCourses.HIDDEN
-};
+// const courses = {
+//     title: "TypeScript BOOM",
+//     type: DemoCourses.HIDDEN
+// };
 
-console.log(courses);
+// console.log(courses);
 
+let lessonsCount:any = 10; // avoid using any as much as you can or rare
+
+lessonsCount = "Boot"
+
+let lessonsArray = [];
 
