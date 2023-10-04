@@ -36,11 +36,47 @@
 // console.log(courses);
 
 // avoid using any as much as you can or rare
-let lessonsCount:number = 10; 
+// let lessonsCount:number = 10; 
 
 
-let lessonsArray = [];
+// let lessonsArray = [];
 
-console.log(lessonsCount);
+// console.log(lessonsCount);
 
+//type aliases
+// type CourseStatus = "draft" | "published" | "unpublished" | "archived";
+
+// let courseStatus: CourseStatus = "draft";
+
+// let newStatus: CourseStatus = "published";
+
+// type Course = {
+//     readonly title:string,
+//     subtitle:string,
+//     lessonsCount?:number
+// };
+
+// let course: Course = {
+//     title: "TypeScript BOOM",
+//     subtitle: "Learn and practice",
+//     lessonsCount: 10
+// };
+
+// interfaces
+interface Course {
+    readonly title: string,
+    subtitle: string,
+};
+interface Course {
+    lessonsCount?: number
+}
+let course: Course = {
+    title: "TypeScript BOOM",
+    subtitle: "Learn and practice",
+    lessonsCount: 10
+};
+
+const input =
+    document.getElementById("input-field") as HTMLInputElement;
+input.value;
 
