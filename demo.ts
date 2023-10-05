@@ -63,20 +63,36 @@
 // };
 
 // interfaces
-interface Course {
-    readonly title: string,
-    subtitle: string,
-};
-interface Course {
-    lessonsCount?: number
-}
-let course: Course = {
-    title: "TypeScript BOOM",
-    subtitle: "Learn and practice",
-    lessonsCount: 10
+// interface Course {
+//     readonly title: string,
+//     subtitle: string,
+// };
+// interface Course {
+//     lessonsCount?: number
+// }
+// let course: Course = {
+//     title: "TypeScript BOOM",
+//     subtitle: "Learn and practice",
+//     lessonsCount: 10
+// };
+
+// const input =
+//     document.getElementById("input-field") as HTMLInputElement;
+// input.value;
+
+const courseName = "TypeScript BOOM"
+
+debugger;
+
+if (courseName) {
+    const subtitle = "Learn that lesson"
+
+    printCourseName(courseName);
 };
 
-const input =
-    document.getElementById("input-field") as HTMLInputElement;
-input.value;
+function printCourseName(name:string) {
+    debugger;
 
+    console.log("The course name is " + name.toUpperCase());
+    
+};
