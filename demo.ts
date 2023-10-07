@@ -36,8 +36,7 @@
 // console.log(courses);
 
 // avoid using any as much as you can or rare
-// let lessonsCount:number = 10; 
-
+// let lessonsCount:number = 10;
 
 // let lessonsArray = [];
 
@@ -80,19 +79,46 @@
 //     document.getElementById("input-field") as HTMLInputElement;
 // input.value;
 
-const courseName = "TypeScript BOOM"
+// const courseName = "TypeScript BOOM"
 
-debugger;
+// debugger;
 
-if (courseName) {
-    const subtitle = "Learn that lesson"
+// if (courseName) {
+//     const subtitle = "Learn that lesson"
 
-    printCourseName(courseName);
-};
+//     printCourseName(courseName);
+// };
 
-function printCourseName(name:string) {
-    debugger;
+// function printCourseName(name:string) {
+//     debugger;
 
-    console.log("The course name is " + name.toUpperCase());
+//     console.log("The course name is " + name.toUpperCase());
+
+// };
+
+// functions
+
+interface Course {
+  title: string,
+  subtitle: string,
+  lessonsCount: number
+}
+
+type CreateCourse = (title: string, subtitle: string, lessonsCount: number) => Course;
+
+type OnCourseCreated = ( course: Course) => void;
+
+const createCourse = (title: string, subtitle: string, lessonsCount:number, callback: OnCourseCreated) => {
+    console.log(` Creating curse with Title: ${title}
+    Subtitle: ${subtitle} lesson count ${lessonsCount}`);
     
-};
+    const course = {
+        title,
+        subtitle,
+        lessonsCount
+    };
+
+    callback(course);
+
+    return course;
+}

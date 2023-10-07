@@ -5,10 +5,10 @@
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
-    "noImplicitAny": true, 
+    "noImplicitAny": true,
     "strictNullChecks": true,
     "skipLibCheck": true
   },
-//   "include": ["/**/*.ts"], // Include TypeScript files in the "src" directory and its subdirectories
-//   "exclude": ["node_modules"] // Exclude the "node_modules" directory from compilation
+  // "include": ["/**/*.ts"], // Include TypeScript files in the "src" directory and its subdirectories
+  // "exclude": ["node_modules"] // Exclude the "node_modules" directory from compilation
 }
