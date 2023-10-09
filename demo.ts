@@ -99,26 +99,38 @@
 // functions
 
 interface Course {
-  title: string,
-  subtitle: string,
-  lessonsCount: number
+  title: string;
+  subtitle: string;
+  lessonsCount: number;
 }
 
-type CreateCourse = (title: string, subtitle: string, lessonsCount: number) => Course;
+// type CreateCourse = (title: string, subtitle: string, lessonsCount: number) => Course;
 
-type OnCourseCreated = ( course: Course) => void;
+// type OnCourseCreated = ( course: Course) => void;
 
-const createCourse = (title: string, subtitle: string, lessonsCount:number, callback: OnCourseCreated) => {
-    console.log(` Creating curse with Title: ${title}
-    Subtitle: ${subtitle} lesson count ${lessonsCount}`);
-    
-    const course = {
-        title,
-        subtitle,
-        lessonsCount
-    };
+// const createCourse = (title: string, subtitle: string, lessonsCount:number, callback: OnCourseCreated) => {
+//     console.log(` Creating curse with Title: ${title}
+//     Subtitle: ${subtitle} lesson count ${lessonsCount}`);
 
-    callback(course);
+//     const course = {
+//         title,
+//         subtitle,
+//         lessonsCount
+//     };
 
-    return course;
+//     callback(course);
+
+//     return course;
+// }
+
+// tuples
+
+type CourseRecord = [string, string, number];
+
+const courseRecord: CourseRecord = ["TypescriptBOOM", "Learn it fast", 100];
+
+function createCourse(title: string, subtitle: string): CourseRecord {
+  console.log(` Creating course with Title: ${title}, Subtitle: ${subtitle} `);
+
+  return [title, subtitle, 100];
 }
