@@ -125,12 +125,30 @@ interface Course {
 
 // tuples
 
-type CourseRecord = [string, string, number];
+// type CourseRecord = [string, string, number];
 
-const courseRecord: CourseRecord = ["TypescriptBOOM", "Learn it fast", 100];
+// const courseRecord: CourseRecord = ["TypescriptBOOM", "Learn it fast", 100];
 
-function createCourse(title: string, subtitle: string): CourseRecord {
-  console.log(` Creating course with Title: ${title}, Subtitle: ${subtitle} `);
+// function createCourse(title: string, subtitle: string): CourseRecord {
+//   console.log(` Creating course with Title: ${title}, Subtitle: ${subtitle} `);
 
-  return [title, subtitle, 100];
+//   return [title, subtitle, 100];
+// }
+
+// Type Narrowing and Predicates
+
+const course: unknown = {
+  title: "TypeScript BOOM",
+  subtitle: "Learn and practice",
+  lessonsCount: 10,
+};
+
+if (isCourse(course)) {
+  course.title;
+}
+
+function isCourse(value: unknown): value is Course {
+  const course = value as Course;
+
+  return course?.title != null && course?.subtitle != null;
 }
