@@ -98,11 +98,11 @@
 
 // functions
 
-interface Course {
-  title: string;
-  subtitle: string;
-  lessonsCount: number;
-}
+// interface Course {
+//   title: string;
+//   subtitle: string;
+//   lessonsCount: number;
+// }
 
 // type CreateCourse = (title: string, subtitle: string, lessonsCount: number) => Course;
 
@@ -137,18 +137,43 @@ interface Course {
 
 // Type Narrowing and Predicates
 
-const course: unknown = {
-  title: "TypeScript BOOM",
-  subtitle: "Learn and practice",
-  lessonsCount: 10,
+// const course: unknown = {
+//   title: "TypeScript BOOM",
+//   subtitle: "Learn and practice",
+//   lessonsCount: 10,
+// };
+
+// if (isCourse(course)) {
+//   course.title;
+// }
+
+// function isCourse(value: unknown): value is Course {
+//   const course = value as Course;
+
+//   return course?.title != null && course?.subtitle != null;
+// }
+
+// never type
+
+// let anyValue:any;
+
+// let neverValue: never = undefinied;
+// neverValue["property"] = 10;
+
+type CourseStatus = "draft" | "published" | "unpublished";
+
+let courseStatus : CourseStatus = "draft";
+
+if (courseStatus == "draft") {
+  
+} else if (courseStatus == "published") {
+
+} else if (courseStatus == "unpublished") {
+
+} else {
+  unexpectedError(courseStatus);
 };
 
-if (isCourse(course)) {
-  course.title;
-}
-
-function isCourse(value: unknown): value is Course {
-  const course = value as Course;
-
-  return course?.title != null && course?.subtitle != null;
+function unexpectedError(value:never) {
+  throw new Error(`Unexpected vaue: ${value}`);
 }
