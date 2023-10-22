@@ -160,20 +160,35 @@
 // let neverValue: never = undefinied;
 // neverValue["property"] = 10;
 
-type CourseStatus = "draft" | "published" | "unpublished";
+// type CourseStatus = "draft" | "published" | "unpublished";
 
-let courseStatus : CourseStatus = "draft";
+// let courseStatus : CourseStatus = "draft";
 
-if (courseStatus == "draft") {
+// if (courseStatus == "draft") {
   
-} else if (courseStatus == "published") {
+// } else if (courseStatus == "published") {
 
-} else if (courseStatus == "unpublished") {
+// } else if (courseStatus == "unpublished") {
 
-} else {
-  unexpectedError(courseStatus);
-};
+// } else {
+//   unexpectedError(courseStatus);
+// };
 
-function unexpectedError(value:never) {
-  throw new Error(`Unexpected vaue: ${value}`);
+// function unexpectedError(value:never) {
+//   throw new Error(`Unexpected vaue: ${value}`);
+// }
+
+//intersection type
+interface HasId {
+  id:string;
+}
+interface HasTitle {
+  title: string;
+  description: string;
+}
+
+type Course = HasId & HasTitle;
+
+const course: Course = {
+
 }
