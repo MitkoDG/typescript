@@ -180,7 +180,7 @@
 
 //intersection type
 interface HasId {
-  id:string;
+  id:string
 }
 interface HasTitle {
   title: string;
@@ -190,5 +190,7 @@ interface HasTitle {
 type Course = HasId & HasTitle;
 
 const course: Course = {
-
+  id: "ddg",
+  title: "Mitko",
+  description: "test test"
 }

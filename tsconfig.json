@@ -9,6 +9,9 @@
     "strictNullChecks": true,
     "skipLibCheck": true
   },
+  "files": [
+    "demo.ts"
+  ]
   // "include": ["/**/*.ts"], // Include TypeScript files in the "src" directory and its subdirectories
   // "exclude": ["node_modules"] // Exclude the "node_modules" directory from compilation
 }
