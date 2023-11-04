@@ -1,14 +1,22 @@
 {
   "compilerOptions": {
     "target": "ESNext",
-    "module": "commonjs",
+    "module": "CommonJS",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "noImplicitAny": true,
     "strictNullChecks": true,
     "skipLibCheck": true,
-    "outDir": "dist"
+    "allowJs": true,
+    "checkJs": true,
+    "outDir": "dist",
+    // "noLib": 
+    // "lib": [
+    //   "ES5",
+    //   "DOM"
+    // ]
+    "baseUrl": ""
   },
   // "files": [
   //   "demo.ts"

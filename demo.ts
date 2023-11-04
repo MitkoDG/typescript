@@ -179,18 +179,23 @@
 // }
 
 //intersection type
-interface HasId {
-  id:string
-}
-interface HasTitle {
-  title: string;
-  description: string;
-}
+// interface HasId {
+//   id:string
+// }
+// interface HasTitle {
+//   title: string;
+//   description: string;
+// }
 
-type Course = HasId & HasTitle;
+// type Course = HasId & HasTitle;
 
-const course: Course = {
-  id: "ddg",
-  title: "Mitko",
-  description: "test test"
-}
+// const course: Course = {
+//   id: "ddg",
+//   title: "Mitko",
+//   description: "test test"
+// }
+
+// plain JavaScript in a TS project
+
+import {varName} from "script";
+
