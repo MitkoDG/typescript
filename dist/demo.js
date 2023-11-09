@@ -5,8 +5,5 @@
 //     }
 // };
 // let courses = null;
-const course = {
-    id: "ddg",
-    title: "Mitko",
-    description: "test test"
-};
+Object.defineProperty(exports, "__esModule", { value: true });
+//# sourceMappingURL=demo.js.map

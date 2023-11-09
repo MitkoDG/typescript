@@ -10,6 +10,8 @@
     "skipLibCheck": true,
     "allowJs": true,
     "checkJs": true,
+    "sourceMap": false,
+    "removeComments": true,
     "outDir": "dist",
     // "noLib": 
     // "lib": [
