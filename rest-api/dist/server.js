@@ -8,7 +8,7 @@ function setupExpress() {
 }
 function startServer() {
     app.listen(9000, function () {
-        console.log("HTTP REST Server is now running at http://localhost:9000/");
+        console.log("v2 TTP REST Server is now running at http://localhost:9000/");
     });
 }
 setupExpress();
