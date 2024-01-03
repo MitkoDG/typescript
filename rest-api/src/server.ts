@@ -1,5 +1,6 @@
 import * as express from 'express';
 import { root } from './routes/root';
+import { isInteger } from './utils';
 
 const app = express();
 
@@ -11,8 +12,21 @@ function setupExpress() {
 
 function startServer() {
 
-    app.listen(9000, ()=> {
-        console.log(`v2 TTP REST Server is now running at http://localhost:9000/`);
+    let port: number;
+
+    const portArg = process.argv[2];
+
+    if (isInteger(portArg)) {
+        port = parseInt(portArg);
+    }
+
+    if (!port) {
+        port = 9000;
+    }
+    
+    
+    app.listen(port, ()=> {
+        console.log(`v2 TTP REST Server is now running at http://localhost:${port}/`);
         
     })
 }
