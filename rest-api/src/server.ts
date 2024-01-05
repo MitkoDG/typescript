@@ -1,7 +1,5 @@
 import * as dotenv from "dotenv";
 import * as express from 'express';
-import { root } from './routes/root';
-import { isInteger } from './utils';
 
 const result = dotenv.config();
 
@@ -9,6 +7,10 @@ if (result.error) {
     console.log(`Error loading enviroment variables, aborting!`);
     process.exit(1);
 }
+
+import { root } from './routes/root';
+import { isInteger } from './utils';
+import { logger } from "./logger";
 
 const app = express();
 
@@ -39,7 +41,7 @@ function startServer() {
 
 
     app.listen(port, () => {
-        console.log(`v2 TTP REST Server is now running at http://localhost:${port}/`);
+        logger.info(`v2 TTP REST Server is now running at http://localhost:${port}/`);
 
     })
 }
