@@ -10,6 +10,9 @@ var Course = /** @class */ (function () {
         this.subtitle;
         this.creationDt;
     }
+    Course.printTitle = function (course) {
+        console.log("The title of the course ".concat(course.title));
+    };
     Object.defineProperty(Course.prototype, "title", {
         set: function (newTitle) {
             if (!newTitle) {
@@ -32,4 +35,5 @@ var Course = /** @class */ (function () {
 }());
 var course = new Course("Typescript", "Learn and BOOM", new Date(2023, 1, 1));
 course.title = "New Value";
-console.log(course);
+// console.log(course);
+Course.printTitle(typescript);

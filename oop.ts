@@ -13,6 +13,11 @@ class Course {
         this.creationDt;
     }
 
+    static printTitle(course) {
+        console.log(`The title of the course ${course.title}`);
+        
+    }
+
     set title(newTitle:string) {
         if (!newTitle) {
             throw "Title cannot be empty"
@@ -33,6 +38,8 @@ const course = new Course(
     new Date(2023, 1, 1)
 );
 
-course.title = "New Value"
+// course.title = "New Value"
 
-console.log(course);
+// console.log(course);
+
+Course.printTitle(typescript);
